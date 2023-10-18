@@ -19,7 +19,6 @@ const actions = {
     initBorrowsList({commit}){
         initBorrowslist().then(res=>{
             console.log(res);
-            
         commit('INITBORROWSLIST',res.data)
         },err=>console.log(err.message))
     },

@@ -11,7 +11,7 @@ const userCode = '2655219534'
 // 管理员获取借阅记录接口
 router.post('/borrowslist', (req, res) => {
     conn.query(`select *
-                from borrowinfo`, (err, rs) => {
+                from borrow`, (err, rs) => {
         let data = rs || []
         if (data.length == 0)
             res.json({
